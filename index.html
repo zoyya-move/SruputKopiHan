@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sruput Kopi Hann</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AlpineJS -->
+    <!-- <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script> -->
+
+    <!-- App -->
+     <!-- <script src="src/app.js"></script>  -->
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar" x-data>
+      <a href="#" class="navbar-logo"> Kopi<span>Hann</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#products">Produk</a>
+        <a href="#Contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+  <a href="#" id="search-button"><i data-feather="search"></i></a>
+  <a href="#" id="shopping-cart-button">
+    <i data-feather="shopping-cart"></i>
+    <span class="item-quantity" style="display:none;">0</span>
+  </a>
+  <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+</div>
+
+
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"> </i></label>
+      </div>
+      <!-- Search Form end -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart">
+        <div class="cart-items"> 
+        </div>
+        <div class="total">
+          <h3>Total: <span class="total-amount">RP 0</span></h3>
+        </div>
+        <div class="empty-message" style="display:none; text-align:center; padding:20px;">
+    Belum ada pesanan
+  </div>
+  <div class="container-input">
+          <input type="text" class="name" placeholder="NAME" />
+          <input type="email" class="email" placeholder="EMAIL" />
+          <input type="number" class="phone" placeholder="NO PHONE" />
+          <input type="button" class="btn" value="Checkout" id="pay-button" disabled id="pay-button"/>
+        </div>
+      <!-- Shopping Cart End -->
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section start-->
+    <section class="home" id="home">
+      <div class="mask-container">
+        <main class="content">
+          <h1>Mari Nikmati Secangkir <span> Kopi</span></h1>
+          <p>
+            Rasakan kenikmatan kopi terbaik dari biji pilihan, diproses dengan
+            penuh cinta dan dedikasi. Temukan cerita di balik setiap cangkir,
+            jelajahi produk kami, dan bergabunglah dalam perjalanan rasa yang
+            menghangatkan hari Anda.
+          </p>
+        </main>
+      </div>
+    </section>
+    <!-- Hero Section end-->
+
+    <!-- about section start-->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/tentang kami.jpg.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Kenapa memilih kopi kami?</h3>
+          <p>
+            Karena setiap cangkir adalah hasil dari perjalanan panjang yang
+            penuh dedikasi. Kami memulai dari akar sampai bekerja sama langsung
+            dengan para petani lokal yang memahami tanah dan tradisi, memilih
+            biji kopi terbaik yang tumbuh di ketinggian dengan iklim sempurna.
+            Setiap biji disangrai dengan presisi, untuk mengeluarkan karakter
+            rasa yang otentik dan seimbang.
+          </p>
+          <p>
+            Kami percaya bahwa kopi bukan sekadar minuman, melainkan sebuah
+            pengalaman. Dari aroma yang membangkitkan indera, hingga rasa yang
+            menetap hangat di setiap tegukan kopi kami diracik untuk
+            menghadirkan momen istimewa dalam keseharian Anda.
+          </p>
+          <p>
+            Lebih dari sekadar kualitas, kami menjunjung nilai keberlanjutan dan
+            keadilan. Setiap pembelian kopi Anda turut mendukung komunitas
+            petani lokal dan proses produksi yang ramah lingkungan. Pilih kopi
+            kami, dan rasakan perbedaannya dalam rasa, dalam cerita, dan dalam
+            dampaknya.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about section end-->
+
+    <!-- Menu Section start -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>
+        Dari kopi klasik hingga racikan spesial, semua kami buat dari biji
+        pilihan dan disajikan dengan sepenuh hati. Temukan rasa yang cocok untuk
+        setiap momen hangat, segar, dan selalu istimewa.
+      </p>
+
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/menu/menu 1.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">- Coffe Espresso -</h3>
+          <p class="menu-card-price">IDR 20.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 2.jpg"
+            alt="Americano"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Americano -</h3>
+          <p class="menu-card-price">IDR 22.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 3.jpg"
+            alt="Cappuccino"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Cappuccino -</h3>
+          <p class="menu-card-price">IDR 28.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 4.jpg"
+            alt="Caffé Latte"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Caffé Latte -</h3>
+          <p class="menu-card-price">IDR 30.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 5.jpg"
+            alt="Macchiato"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Macchiato -</h3>
+          <p class="menu-card-price">IDR 25.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/Menu 6.jpg"
+            alt="Coffe Flat White"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Flat White -</h3>
+          <p class="menu-card-price">IDR 32.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 7.jpg"
+            alt="Coffe Susu Gula Aren"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Susu Gula Aren -</h3>
+          <p class="menu-card-price">IDR 28.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/Menu 8.jpg"
+            alt="Coffe Vietnam Drip"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffe Vietnam Drip -</h3>
+          <p class="menu-card-price">IDR 30.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 9.jpg"
+            alt="Mactha Latte"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Mactha Latte -</h3>
+          <p class="menu-card-price">IDR 22.000</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/menu/menu 11.jpg"
+            alt="Lemon Tea"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Lemon Tea -</h3>
+          <p class="menu-card-price">IDR 12.000</p>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section end -->
+
+    <!-- Products Section start-->
+    <section class="products" id="products">
+      <h2><span>Produk Unggulan</span> Kami</h2>
+      <p>
+        Temukan cita rasa khas dari racikan kopi andalan kami. Signature blend
+        kami adalah perpaduan biji kopi terbaik dari dataran tinggi Indonesia
+        menghasilkan rasa yang seimbang antara kekayaan aroma, keasaman yang
+        lembut, dan aftertaste yang halus.
+      </p>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button1"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/2.jpg" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Corffaa</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price"> Rp 55.250 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button2"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/3.jpg" alt="Product 3" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Pachest</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 63.750 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button3"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/4.jpg" alt="Product 4" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Top Land</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 68.000 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button4"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/5.jpg" alt="Product 5" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Blended</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 51.000 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button5"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/6.jpg" alt="Product 6" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Torava</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 72.250 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button6"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/7.jpg" alt="Product 7" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Robusta</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price"> Rp 42.500 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button7"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/8.jpg" alt="Product 8" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Ofeage</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price"> Rp 59.500 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button8"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/9.jpg" alt="Product 9" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Cocohine</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 63.750 </span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <button onclick="addToCart(event)"><i data-feather="shopping-cart"></i></button>
+            <a href="#" class="item-detail-button9"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/10.jpg" alt="Product 10" />
+          </div>
+          <div class="product-content">
+            <h3>Coffe Blartinighi</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price"> Rp 76.500 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products Section end -->
+
+    <!-- Contact Section start -->
+    <section id="Contact" class="Contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>
+        Punya pertanyaan, saran, atau sekadar ingin ngobrol soal kopi? Kami siap
+        mendengar. Hubungi kami lewat formulir, email, atau media sosial kami
+        akan dengan senang hati menyambut pesan dari kamu
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.33972613805!2d109.096640003551!3d-6.870527652544572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9dfbf3264c3%3A0x3027a76e352bbe0!2sTegal%2C%20Tegal%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1745591500964!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section end -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#Contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">RaihanAdyatma</a>. | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Modal Box Item Detail Start -->
+    <div class="modal" id="item-detail-modal1">
+      <div class="modal-container">
+        <a href="#" class="close-icon1"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/2.jpg" alt="Product 2" />
+          <div class="product-content">
+            <h3>Coffe Corffaa</h3>
+            <p>
+              Kopi instan ini memiliki rasa kaya dengan sentuhan karamel gelap
+              dan cokelat, berasal dari biji kopi Amerika dan Afrika Timur.
+              Cocok bagi pecinta kopi yang menginginkan kemudahan tanpa
+              mengorbankan cita rasa.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 55.250</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal2">
+      <div class="modal-container">
+        <a href="#" class="close-icon2"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/3.jpg" alt="Product 3" />
+          <div class="product-content">
+            <h3>Coffe Pachest</h3>
+            <p>
+              bubuk kopi premium yang diracik dari biji kopi pilihan berkualitas
+              tinggi, dipanen dari dataran tinggi Indonesia yang kaya akan cita
+              rasa. Disangrai dengan teknik khusus untuk menjaga keseimbangan
+              antara kekuatan aroma, kekayaan rasa, dan aftertaste yang halus
+              menciptakan pengalaman ngopi yang istimewa di setiap cangkir.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 63.750</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal3">
+      <div class="modal-container">
+        <a href="#" class="close-icon3"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/4.jpg" alt="Product 4" />
+          <div class="product-content">
+            <h3>Coffe Top Land</h3>
+            <p>
+              Bubuk kopi Coffee Top Land dibuat dari biji kopi pilihan yang
+              tumbuh di dataran tinggi dengan iklim dan tanah yang sempurna
+              untuk menghasilkan rasa kopi yang kaya dan berkarakter. Dengan
+              aroma yang harum, rasa yang seimbang, dan aftertaste yang halus,
+              Coffee Top Land menjadi pilihan ideal bagi kamu yang menghargai
+              kesederhanaan dalam rasa, namun tetap menginginkan kualitas
+              terbaik di setiap tegukan. Cocok untuk berbagai metode seduh baik
+              tubruk, manual brew, hingga espresso Coffee Top Land siap menemani
+              setiap momen ngopimu, dari pagi yang sibuk hingga sore yang
+              tenang.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 68.000</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal4">
+      <div class="modal-container">
+        <a href="#" class="close-icon4"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/5.jpg" alt="Product 5" />
+          <div class="product-content">
+            <h3>Coffe Blended</h3>
+            <p>
+              bubuk kopi hasil racikan biji kopi pilihan dari berbagai daerah
+              terbaik, dipadukan dengan proporsi yang tepat untuk menciptakan
+              rasa yang seimbang, aroma yang kaya, dan aftertaste yang lembut.
+              Dirancang untuk kamu yang menginginkan pengalaman ngopi yang
+              konsisten namun tetap berkarakter, Coffee Blended cocok dinikmati
+              oleh semua kalangan baik penikmat kopi pemula maupun pecinta kopi
+              sejati.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 51.000</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal5">
+      <div class="modal-container">
+        <a href="#" class="close-icon5"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/6.jpg" alt="Product 6" />
+          <div class="product-content">
+            <h3>Coffe Torava</h3>
+            <p>
+              bubuk kopi berkualitas tinggi yang dibuat dari biji kopi pilihan
+              asal Toraja daerah yang dikenal sebagai salah satu penghasil kopi
+              terbaik di Indonesia. Tumbuh di ketinggian dengan iklim sejuk dan
+              tanah vulkanik yang subur, biji kopi Toraja menghasilkan profil
+              rasa yang kompleks dan berkarakter. Coffee Torava menghadirkan
+              rasa yang earthy dengan sentuhan rempah dan keasaman yang lembut,
+              ditutup dengan aftertaste yang bersih dan memikat. Disangrai
+              dengan tingkat kematangan yang optimal dan digiling halus, kopi
+              ini cocok untuk diseduh dengan berbagai metode, seperti tubruk,
+              pour over, maupun mesin kopi.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 72.250</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal6">
+      <div class="modal-container">
+        <a href="#" class="close-icon6"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/7.jpg" alt="Product 7" />
+          <div class="product-content">
+            <h3>Coffe Robusta</h3>
+            <p>
+              bubuk kopi yang diracik dari biji robusta pilihan, dikenal dengan
+              karakter rasanya yang kuat, kadar kafein tinggi, dan body yang
+              tebal. Cocok untuk kamu yang butuh semangat ekstra dan suka rasa
+              kopi yang bold dan intens. Dengan aroma yang tajam dan aftertaste
+              yang khas, Coffee Robusta menjadi pilihan ideal untuk diseduh
+              sebagai kopi tubruk, espresso, atau campuran kopi susu. Disangrai
+              dan digiling dengan cermat untuk menjaga cita rasa alaminya, kopi
+              ini siap menemani hari-harimu yang penuh aktivitas.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 42.500</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal7">
+      <div class="modal-container">
+        <a href="#" class="close-icon7"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/8.jpg" alt="Product 8" />
+          <div class="product-content">
+            <h3>Coffe Ofeage</h3>
+            <p>
+              Dibuat dari biji pilihan dengan karakter rasa yang halus dan
+              seimbang, Coffee Ofeage cocok untuk kamu yang suka kopi ringan
+              tapi tetap berkesan. Aromanya harum, aftertaste nya menyenangkan
+              pas untuk dinikmati kapan saja.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 59.500</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal8">
+      <div class="modal-container">
+        <a href="#" class="close-icon8"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/9.jpg" alt="Product 9" />
+          <div class="product-content">
+            <h3>Coffe Cocohine</h3>
+            <p>
+              bubuk kopi pilihan dengan cita rasa yang dalam dan aroma yang
+              menggoda. Diracik dari biji kopi berkualitas tinggi, kopi ini
+              menawarkan keseimbangan sempurna antara kekuatan, kehalusan, dan
+              aftertaste yang memikat. Cocok untuk kamu yang mencari sensasi
+              kopi yang berani namun tetap nyaman di lidah ideal untuk diseduh
+              dengan berbagai metode.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 63.750</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="item-detail-modal9">
+      <div class="modal-container">
+        <a href="#" class="close-icon9"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/10.jpg" alt="Product 10" />
+          <div class="product-content">
+            <h3>Coffe Blartinighi</h3>
+            <p>
+              bubuk kopi premium yang diracik dari biji kopi terbaik dengan cita
+              rasa yang kompleks dan berkelas. Memiliki aroma yang kaya, body
+              yang penuh, serta aftertaste yang halus dan tahan lama cocok untuk
+              kamu yang menghargai kopi dengan karakter kuat dan elegan. Ideal
+              untuk diseduh sebagai espresso, tubruk, atau manual brew, Coffee
+              Blartinighi memberikan pengalaman ngopi yang berbeda di setiap
+              tegukan.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 76.500</div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span> add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Box Item Detail End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- my javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
